@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const useData = () => {
     const [data, setData] = useState();
     useEffect(() => {
-        getData('data').then(setData);
+        getData('dashboard').then(setData);
     }, []);
     return { data }
 }

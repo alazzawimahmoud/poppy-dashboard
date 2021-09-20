@@ -5,9 +5,9 @@ import Header from "../components/header";
 
 const Page = () => {
   const { data } = useData();
+  console.log(data)
   return <Layout title="Page">
     <Header/>
-    <div className="text-xl">{data?.data || 'Loading ...'}</div>
     <Link href="/"><a className="text-xl">Home</a></Link>
   </Layout>;
 }
