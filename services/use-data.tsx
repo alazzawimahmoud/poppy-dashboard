@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const useData = () => {
-    const [data, setData] = useState();
+    const [data, setData] = useState<any>();
     useEffect(() => {
         getData('dashboard').then(setData);
     }, []);
