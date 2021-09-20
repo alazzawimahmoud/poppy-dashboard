@@ -9,7 +9,7 @@ const useData = () => {
 }
 
 export async function getData(path: string) {
-    return await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/${path}`).then(results => results.json())
+    return await fetch(`/api/${path}`).then(results => results.json())
 }
 
 export default useData;
