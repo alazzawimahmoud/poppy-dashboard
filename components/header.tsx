@@ -1,10 +1,10 @@
 const Header: React.FunctionComponent = () => {
   return (
     <>
-      <div className="grid w-40 justify-center">
-        <img className="bg-center bg-no-repeat bg-contain w-full rounded-lg" src="/images/logo.svg" />
+      <div className="grid justify-center w-40">
+        <img className="w-full bg-center bg-no-repeat bg-contain rounded-lg" src="/images/logo.svg" />
       </div>
-      <div className="text-4xl uppercase  font-bold">Peace out!✌🏻</div>
+      <div className="text-4xl font-bold uppercase">Poppy Dashboard! 🚗</div>
     </>
   )
 }
