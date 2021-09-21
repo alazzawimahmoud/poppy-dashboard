@@ -39,6 +39,11 @@ export interface Zone {
     geom: Geom;
 }
 
+export interface ZoneExtended extends Zone {
+    cars: number;
+    carsPercentage: number;
+    slots: number
+}
 export interface Geom {
     type: string;
     geometry: MultiPolygon;
@@ -60,4 +65,10 @@ export interface Parking {
     payingZone: null;
     hasPlateScan: boolean;
     description: string;
+}
+
+export interface Dashboard {
+    cars: Vehicle[],
+    parkings: Parking[],
+    zones: ZoneExtended[],
 }

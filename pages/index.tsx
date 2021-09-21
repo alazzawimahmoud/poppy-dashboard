@@ -1,15 +1,12 @@
-import Link from 'next/link'
+import dynamic from 'next/dynamic';
 import Layout from '../components/layout';
-import Header from '../components/header';
-import useData from '../services/use-data';
+import { useDashboard } from '../services/api-hooks';
+const Dashboard = dynamic(() => import('../components/dashboard'), { ssr: false });
 
 const Home = () => {
-  const { data } = useData()
-  return <Layout title="Home">
-    <Header />
-    <div className="text-xl">
-      {data?.zones.map((zone, index) => <div key={index}>{zone.name} - {zone.cars}</div>)}
-    </div>
+  const { data, loading } = useDashboard();
+  return <Layout>
+    {loading ? 'loading 🚗 🚗 🚗 ' : <Dashboard data={data} />}
   </Layout>;
 }
 
