@@ -12,7 +12,7 @@ const Home = () => {
   const { data:dashboardData, loading:loadingDashboardData } = useDashboard();
   const { data:historyData, loading:loadingHistoryData } = useHistory();
   const [activeZone, setActiveZone] = useState<ZoneExtended>();
-  const [view, setView] = useState<'home' | 'history'>('history');
+  const [view, setView] = useState<'home' | 'history'>('home');
 
   return <Layout title="Home 🚗">
     {loadingDashboardData || loadingHistoryData ? 'loading 🚗 🚗 🚗 ' :
