@@ -39,11 +39,22 @@ export interface Zone {
     geom: Geom;
 }
 
-export interface ZoneExtended extends Zone {
+export interface ResultsBase {
     cars: number;
     carsPercentage: number;
     slots: number
 }
+
+export interface ZoneResultsBase extends ResultsBase {
+    date: Date;
+}
+
+export interface HistoricalData {
+    zone: string;
+    data: ZoneResultsBase[]
+}
+
+export interface ZoneExtended extends Zone, ResultsBase {}
 export interface Geom {
     type: string;
     geometry: MultiPolygon;
